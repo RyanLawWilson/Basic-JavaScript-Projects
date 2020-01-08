@@ -29,4 +29,20 @@ document.write(Math.PI + Math.E);
 function myFirstFunction() {
     document.getElementById("Green_Text").innerHTML = 
         document.getElementById("Green_Text").innerHTML.fontcolor("green");
+    /* 
+        Using innerHTML.fontcolor makes a font element.
+        This is not good for events like mouseover and mouseout
+        because the font elements will just nest infinitely
+        making the first font element that was created the
+        highest priority.
+    */
+}
+
+//Have to use style property to change colors.
+function mouseOverParagraph(x) {
+    x.style.color = "red";
+}
+
+function mouseOutParagraph(x) {
+    x.style.color = "black";
 }
