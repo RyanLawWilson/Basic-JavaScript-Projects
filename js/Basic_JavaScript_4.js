@@ -10,6 +10,7 @@ function myDictionary() {
         spDefense: 10,
         speed: 10,
         sound: "Jiggly!",
+        sound: "JigglyPUFF!"
     };
 
     delete jigglyPuff.sound
