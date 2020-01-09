@@ -7,7 +7,25 @@
 		<link rel="stylesheet" type="text/css" href="">
 	</head>
 	<body>
+        <p id="test1" onclick="func1()">This should turn into NaN if you click me.</p>
+
+        <p id="test2" onclick="func2()">This should turn into true if you click me.</p>
+
+        <p id="test3" onclick="func3()">This should turn into false if you click me.</p>
+
+        <p id="posInfinityText" onclick="showInfinityPos()">WARNING: Clicking me show Infinity.</p>
+
+        <p id="negInfinityText" onclick="showInfinityNeg()">WARNING: Clicking me show -Infinity.</p><br>
+
+        <h3>Press the [>] button to change to less than and vice versa.</h3>
+
+        <!-- It should look like this: [ #1 ][>][ #2 ] Result: True-->
+        <input style="width: 50px;" type="text" id="num1" placeholder="Enter #1">
+        <button onclick="switchSigns()" id="signButton" value="1">&gt;</button>
+        <input style="width: 50px;" type="text" id="num2" placeholder="Enter #2">
+        <button onclick="calcResult()">Result:&nbsp;</button>
+        <label id="result">True</label>
         
-        <script src="js/Basic_JavaScript_4.js"></script>
+        <script src="js/Basic_JavaScript_5.js"></script>
 	</body>
 </html>
