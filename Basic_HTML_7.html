@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>HTML 7</title>
+  </head>
+  <body>
+
+
+    <!------------------------------------------------------
+        This container demonstrates the following:
+            Demonstrate local vs global variables.
+            If statements | using Date.
+            My own if statement
+            if, else, and else if
+    --------------------------------------------------------->
+    <div class="container">
+        <h1 class="text-center">Basic_HTML_7 with JavaScript</h1>
+
+        <!-- Row 1 -->
+        <div class="row bg-dark m-2 p-2 align-items-center text-center">
+
+            <!-- Column 1 -->
+            <div class="col-4 bg-success mx-2 text-center py-1">
+                <h3>Global vs Local Variables.</h3>
+                <p>The outputs are in the console.</p>
+                <button onclick="globalVSLocal()" type="button" class="btn btn-light">Do Some Math</button>
+                <button onclick="displayResults()" type="button" class="btn btn-light">Display</button>
+                <br>
+                <br>
+                <button onclick="clearConsole()" type="button" class="btn btn-sm btn-dark">Clear Console</button>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="col-5 bg-success mx-2 text-center">
+                <h4 class="py-3" onclick="get_date()" id="greeting">Greetings!  Click me for the time.</h4>
+
+                <!-- Guessing Game in JavaScript-->
+                <div class="row align-items-center bg-dark">
+                    <h2 class="text-light">How about a guessing game?</h2>
+
+                    <!-- Column A-->
+                    <div class="col">
+                        <div class="input-group my-1">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text font-weight-bold" id="life">&#10084;7</span>
+                            </div>
+                            <input id="guess" type="text" class="form-control" aria-describedby="basic-addon1">
+                        </div>
+                        <button onclick="checkGuess()" type="button" class="btn btn-success btn-block mb-1">Guess</button>
+                    </div>
+
+                    <!-- Column B-->
+                    <div class="col">
+                        <p id="answerFeedback" class="text-light font-weight-bold">This will tell you if you are correct or not.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="col bg-success mx-2">
+                <p class="font-weight-bolder">Change the amount of lives you get:</p>
+                <div class="input-group my-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text font-weight-bold">&#10084;</span>
+                    </div>
+                    <input id="newLifeAmount" type="text" class="form-control" aria-describedby="basic-addon1" value="7">
+                </div>
+                <button onclick="changeLife()" type="button" class="btn btn-danger btn-block mb-1">Change</button>
+                <p id="statusUpdate">Normal amount of lives: 7</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!------------------------------------------------------
+        This container demonstrates the following:
+            Showing the time using if,else, and else if
+    --------------------------------------------------------->
+    <div class="container">
+        <h2 class="mx-2 mt-5">Some more JavaScript / HTML</h2>
+
+        <!-- Row 1 -->
+        <div class="row bg-dark m-2 p-2 align-items-center text-center text-info">
+            <div class="col">
+                <p id="Time_of_day">Time will display here</p>
+                <button onclick="Time_Function()" type="button" class="btn btn-primary btn-block mb-1 ">Tell the Time</button>
+            </div>
+            <div class="col-4">
+                
+            </div>
+            <div class="col">
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <script src="js/Basic_JavaScript_7.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
