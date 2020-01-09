@@ -1,32 +1,137 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>HTML / JavaScript 8</title>
-  </head>
-  <body>
-    
-
-
+        <title>HTML / JavaScript 8</title>
+    </head>
+    <body>
+        <h1 class="text-center mb-5">JavaScript Project 8</h1>
 
 
 
+        <!-- Using the concat() method -->
+        <div class="container bg-dark my-2">
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-light text-center m-3 text-monospace">Concatenation</h1>
+                </div>
+            </div>
+            <div class="row align-items-center p-2 pb-4">
+
+                <!-- Column 1 | Getting 4 strings from the user -->
+                <div class="col-7">
+                    <h4 class="text-light">Type into the boxes, then hit the button</h4>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon3">String #1:</span>
+                        </div>
+                        <input type="text" class="form-control" id="string1" aria-describedby="basic-addon3">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon3">String #2:</span>
+                        </div>
+                        <input type="text" class="form-control" id="string2" aria-describedby="basic-addon3">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon3">String #3:</span>
+                        </div>
+                        <input type="text" class="form-control" id="string3" aria-describedby="basic-addon3">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon3">String #4:</span>
+                        </div>
+                        <input type="text" class="form-control" id="string4" aria-describedby="basic-addon3">
+                    </div>
+
+                    <button type="button" class="btn btn-primary btn-lg" onclick="concatenate()">Concatenate!!</button>
+                </div>
+
+                <!-- Column 2 | Displaying strings concatenated -->
+                <div class="col-5">
+                    <h3 class="text-light">Strings are concatenated here:</h3>
+                    <p id="concatString" class="font-weight-bold text-info"></p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Using the slice() method -->
+        <div class="container bg-dark my-5">
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-light text-center m-3 text-monospace">Slicing</h1>
+                </div>
+            </div>
+            <div class="row">
+
+                <!-- Column 1 | Showing the Slice!-->
+                <div class="col-4">
+                    <h3 class="text-light">Sliced text shown here:</h3>
+                    <p class="font-weight-bold text-danger" id="slicedText">text</p>
+                </div>
+
+                <!-- Column 2 | Getting String and asking for two numbers-->
+                <div class="col-8">
+                    <h4 class="text-light">Type your string and the start and end #</h4>
+                    <div class="input-group my-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">String</span>
+                        </div>
+                        <input type="text" class="form-control" id="string" aria-describedby="basic-addon3">
+                    </div>
+
+                    <!-- Contains textboxes for start of slice, resresh button, end of slice, and slice button -->
+                    <div class="row">
+                    
+                        <div class="col-4">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Min 0</span>
+                                </div>
+                                <input type="text" class="form-control" id="start" aria-describedby="basic-addon3">
+                            </div>
+                        </div>
+                        <div class="col-1">
+                            <button type="button" class="btn btn-primary" onclick="refresh()">&#8635;</button>
+                        </div>
+                        <div class="col-4">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="maxNum">Max</span>
+                                </div>
+                                <input type="text" class="form-control" id="end" aria-describedby="basic-addon3">
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <button type="button" class="btn btn-primary btn-block" onclick="slicing()">Slice!!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
 
-    <script src=""></script>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+
+
+        <script src="js/Basic_JavaScript_8.js"></script>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
 </html>
