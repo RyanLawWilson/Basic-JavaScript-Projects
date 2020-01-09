@@ -22,6 +22,14 @@ function showInfinityNeg() {
     document.getElementById("negInfinityText").innerHTML = -3E310;
 }
 
+function notT() {
+    document.getElementById("notTextT").innerHTML = !(1 > 2);
+}
+
+function notF() {
+    document.getElementById("notTextF").innerHTML = !(1 < 2);
+}
+
 // This is to make the button switch from > to < and back again.
 function switchSigns() {
     if (document.getElementById("signButton").value == 1) {

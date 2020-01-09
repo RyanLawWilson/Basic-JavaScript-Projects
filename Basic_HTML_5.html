@@ -13,9 +13,15 @@
 
         <p id="test3" onclick="func3()">This should turn into false if you click me.</p>
 
-        <p id="posInfinityText" onclick="showInfinityPos()">WARNING: Clicking me show Infinity.</p>
+        <p id="posInfinityText" onclick="showInfinityPos()">WARNING: Clicking me shows Infinity.</p>
 
-        <p id="negInfinityText" onclick="showInfinityNeg()">WARNING: Clicking me show -Infinity.</p><br>
+        <p id="negInfinityText" onclick="showInfinityNeg()">WARNING: Clicking me shows -Infinity.</p>
+
+        <!-- Not Operators-->
+        <p id="notTextT" onclick="notT()">Click me to display true using not operator</p>
+        <p id="notTextF" onclick="notF()">Click me to display false using not operator</p>
+
+        <br>
 
         <h3>Press the [>] button to change to less than and vice versa.</h3>
 
@@ -25,6 +31,8 @@
         <input style="width: 50px;" type="text" id="num2" placeholder="Enter #2">
         <button onclick="calcResult()">Result:&nbsp;</button>
         <label id="result">True</label>
+
+        
         
         <script src="js/Basic_JavaScript_5.js"></script>
 	</body>
