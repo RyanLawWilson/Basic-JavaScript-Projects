@@ -9,13 +9,20 @@ function concatenate() {
     document.getElementById("concatString").innerHTML = combined;
 }
 
+//Uses the typed string, start, and end values to slice
 function slicing() {
     var str = document.getElementById("string").value;
     var startNum = document.getElementById("start").value;
     var endNum = document.getElementById("end").value;
 
     document.getElementById("slicedText").innerHTML = str.slice(parseInt(startNum), parseInt(endNum));
+    refresh();
 }
 
+//Refreshes the max # so that the user knows how long the string is.
 function refresh() {
+    var str = document.getElementById("string").value;
+    var maxNum = str.length;
+
+    document.getElementById("maxNum").innerHTML = "Max " + maxNum;
 }

@@ -72,7 +72,7 @@
                     <h1 class="text-light text-center m-3 text-monospace">Slicing</h1>
                 </div>
             </div>
-            <div class="row">
+            <div class="row pb-3">
 
                 <!-- Column 1 | Showing the Slice!-->
                 <div class="col-4">
@@ -82,7 +82,7 @@
 
                 <!-- Column 2 | Getting String and asking for two numbers-->
                 <div class="col-8">
-                    <h4 class="text-light">Type your string and the start and end #</h4>
+                    <h4 class="text-light">Type your string and start and end #</h4>
                     <div class="input-group my-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">String</span>
@@ -92,9 +92,8 @@
 
                     <!-- Contains textboxes for start of slice, resresh button, end of slice, and slice button -->
                     <div class="row">
-                    
                         <div class="col-4">
-                            <div class="input-group mb-3">
+                            <div class="input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Min 0</span>
                                 </div>
@@ -105,9 +104,9 @@
                             <button type="button" class="btn btn-primary" onclick="refresh()">&#8635;</button>
                         </div>
                         <div class="col-4">
-                            <div class="input-group mb-3">
+                            <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="maxNum">Max</span>
+                                    <span class="input-group-text" id="maxNum">Max 0</span>
                                 </div>
                                 <input type="text" class="form-control" id="end" aria-describedby="basic-addon3">
                             </div>
@@ -120,6 +119,54 @@
             </div>
         </div>
 
+
+
+        <!-- toUpperCase() and search() challenge -->
+        <div class="container bg-dark my-5">
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-light text-center m-3 text-monospace">toUpperCase() and search()</h1>
+                </div>
+            </div>
+            
+            <!-- User inputs their string here-->
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <h4 class="text-light">Type the string you want to modify:</h4>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Your String</span>
+                        </div>
+                        <input type="text" class="form-control" id="modifyString" aria-describedby="basic-addon3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pb-3 justify-content-center">
+                <div class="col-5 text-center">
+                    <button type="button" class="btn btn-primary mx-auto" onclick="convertUpperCase()">Apply UpperCase</button>
+                    <p id="upperCaseText" class="font-weight-bold text-warning text-left">test</p>
+                </div>
+                <div class="col-5 text-center">
+                    <h5 class="text-light">Type in a word from your string: </h5>
+
+                    <div class="row">
+                        <div class="col">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="word" placeholder="Word">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-primary mx-auto" onclick="convertUpperCase()">Search Your String</button>
+                        </div>
+                    </div>
+
+                    <p id="upperCaseText" class="font-weight-bold text-warning text-success">test</p>
+                </div>
+            </div>
+        </div>
 
 
 
