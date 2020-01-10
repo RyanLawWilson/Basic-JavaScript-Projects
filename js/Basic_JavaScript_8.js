@@ -56,5 +56,53 @@ function searchString() {
     }
 }
 
+/******************************************
+ * Technically, text boxes always give you strings.
+ * So fisrt, I parsed the string to an integer then
+ * used the toString() method.
+ *****************************************/
+function convertToString() {
+    var str = document.getElementById("toStringTextBox").value;
+    var num = parseInt(str);
     
+    //Making sure that I'm actually converting a number to a string.
+    document.getElementById("toStringText").innerHTML = (typeof num == "number") ?
+        "Your number as a string:<br>" + num.toString() :
+        "Something went wrong!";
+}
+
+/******************************************
+ * Takes the number and precision, turns the number into
+ * a float, and uses toPrecision() to output the modified
+ * number with specified precision.
+ *****************************************/
+function useToPrecision() {
+    var num = parseFloat(document.getElementById("toPrecisionTextBox").value);
+    var prec = document.getElementById("precision").value;
+    
+    document.getElementById("toPrecisionText").innerHTML = 
+        "Using toPrecision(),<br>" + num + "<br>becomes<br>" + num.toPrecision(prec);
+}
+
+/******************************************
+ * toFixed() is used to convert a decimal into a string
+ * with a specific number of decimal points.
+ *****************************************/
+function useToFixed() {
+    var num = parseFloat(document.getElementById("toFixedTextBox").value);
+
+    document.getElementById("toFixedButton").innerHTML = num.toFixed(2);
+}
+
+/******************************************
+ * valueOf() returns to primitive value of a
+ * string or a number.
+ *****************************************/
+function useValueOf() {
+    var input = document.getElementById("valueOfTextBox").value;
+
+    document.getElementById("valueOfButton").innerHTML = input.valueOf();
+}
+
+
 

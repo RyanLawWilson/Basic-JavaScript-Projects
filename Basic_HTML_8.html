@@ -178,10 +178,100 @@
             </div>
         </div>
 
+        <!-- toString() method and toPrecision() method -->
+        <div class="container bg-dark my-5">
+            <div class="row pb-3">
 
+                <!-- toString() -->
+                <div class="col-6">
+                    <h1 class="text-light text-center m-3 text-monospace">toString()</h1>
+                    <div class="row px-2 align-items-center">
 
+                        <!-- Output -->
+                        <div class="col">
+                            <p class="text-info font-weight-bold" id="toStringText">Your String</p>
+                        </div>
 
+                        <!-- Text Box and button -->
+                        <div class="col text-center">
+                            <h4 class="text-light">Enter Number:</h4>
+                            <input type="text" class="form-control" id="toStringTextBox" placeholder="#">
+                            <button type="button" class="btn btn-primary mt-3" onclick="convertToString()">Convert to String</button>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- toPrecision() -->
+                <div class="col-6">
+                    <h1 class="text-light text-center m-3 text-monospace">toPrecision()</h1>
+                    <div class="row px-2 align-items-center">
+
+                        <!-- 2 Text Boxes and button  -->
+                        <div class="col text-center">
+                            <h4 class="text-light">Enter Decimal Number:</h4>
+                            <input type="text" class="form-control" id="toPrecisionTextBox" placeholder="#">
+
+                            <!--Precision text box and button -->
+                            <div class="row mt-3">
+
+                                <!-- Precision text box -->
+                                <div class="col">
+                                    <input type="text" class="form-control" id="precision" placeholder="precision">
+                                </div>
+
+                                <!-- Button -->
+                                <div class="col">
+                                    <button type="button" class="btn btn-primary" onclick="useToPrecision()">Format</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Output -->
+                        <div class="col">
+                            <p class="text-danger font-weight-bold" id="toPrecisionText">Your Number</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- toFixed(), valueOf() -->
+        <div class="container bg-dark my-5">
+            <div class="row pb-3">
+
+                <!-- toFixed()-->
+                <div class="col-6 text-center">
+                    <h1 class="text-light text-center m-3 text-monospace">toFixed()</h1>
+                    <h4 class="text-light">Enter Decimal Number:</h4>
+
+                    <!-- Text Box -->
+                    <div class="row justify-content-center">
+                        <div class="col-6">
+                            <input type="text" class="form-control" id="toFixedTextBox" placeholder="Decimal Number">
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <button type="button" class="btn btn-primary mt-3" id="toFixedButton" onclick="useToFixed()">Format Number</button>
+                </div>
+
+                <!-- valueOf()-->
+                <div class="col-6 text-center">
+                    <h1 class="text-light text-center m-3 text-monospace">valueOf()</h1>
+                    <h4 class="text-light">Enter number or string</h4>
+
+                    <!-- Text Box -->
+                    <div class="row justify-content-center">
+                        <div class="col-6">
+                            <input type="text" class="form-control" id="valueOfTextBox" placeholder="str or num">
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <button type="button" class="btn btn-primary mt-3" id="valueOfButton" onclick="useValueOf()">Show Value</button>
+                </div>
+            </div>
+        </div>
 
         <script src="js/Basic_JavaScript_8.js"></script>
 
