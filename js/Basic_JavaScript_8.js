@@ -26,3 +26,35 @@ function refresh() {
 
     document.getElementById("maxNum").innerHTML = "Max " + maxNum;
 }
+
+/*******************************
+ * The toUpperCase() function retruns the string
+ * but all of the alphabetical characters are 
+ * uppercase.
+*******************************/
+function convertUpperCase() {
+    var str = document.getElementById("modifyString").value;
+    var strUpperCase = str.toUpperCase();
+
+    document.getElementById("upperCaseText").innerHTML = strUpperCase;
+}
+
+/*****************************************
+ * search() finds the specified string in a string and returns
+ * the position of that string.  If I had var string = "A cool cat";
+ * then string.search("cool") would return 3.  Returns -1 if no match.
+ *****************************************/
+function searchString() {
+    var str = document.getElementById("modifyString").value;
+    var searchWord = document.getElementById("word").value;
+    var searchWord_index = str.search(searchWord);
+
+    if (searchWord_index == -1) {
+        document.getElementById("searchText").innerHTML = "I couldn't find " + searchWord + ".  Sorry.";
+    } else {
+        document.getElementById("searchText").innerHTML = searchWord + " starts at position " + searchWord_index;
+    }
+}
+
+    
+
