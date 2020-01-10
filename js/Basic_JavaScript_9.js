@@ -5,8 +5,8 @@ function countdown() {
         seconds--;
 
         /**************************************************
-         * This is not necessarily shorthand.  It works because when an ID is
-         *         
+         * This is not necessarily shorthand.  It works because when an Id is declared in the HTML,
+         * The linkned JavaScript makes that Id name a global variable.
         **************************************************/
         timer.innerHTML = seconds;
         setTimeout(tick, 1000);
