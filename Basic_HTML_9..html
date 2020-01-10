@@ -8,6 +8,9 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+        <!-- My CSS -->
+        <link rel="stylesheet" type="text/css" href="css/Basic_CSS_1.css">
+
         <title>Project 9</title>
     </head>
     <body style="background-color: rgb(52,58,64);">
@@ -15,7 +18,7 @@
 
         <!-- Timer program | asa;jsdak;fjsakfdja -->
         <div class="container bg-secondary my-2">
-            <div class="row p-2">
+            <div class="row p-2 align-items-center m-2 justify-content-center">
 
                 <!-- Creating a JavaScript Program | Timer -->
                 <div class="col-6 text-center">
@@ -41,10 +44,50 @@
                     
                     
                 </div>
+            </div>
+        </div>
 
-                <!--  -->
+
+
+
+
+        <!-- Slide Show Bootsrap Container -->
+        <div class="container bg-secondary my-2">
+            <div class="row my-4">
                 <div class="col">
+                    <h1 class="text-danger text-center m-2 text-monospace font-weight-bolder">Slideshow</h1>
 
+                    <!-- Slide Show Container-->
+                    <div class="slideshow-container">
+                        <div class="mySlides fade">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="images/kingdedede.jpg" style="width: 100%;">
+                            <div class="caption">King Dedede</div>
+                        </div>
+                        <div class="mySlides fade">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="images/kingkrool.jpg" style="width: 100%;">
+                            <div class="caption">King K. Rool</div>
+                        </div>
+                        <div class="mySlides fade">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="images/jigglypuff.jpg" style="width: 100%;">
+                            <div class="caption">Jigglypuff</div>
+                        </div>
+
+                        <!-- Next and Previous Buttons -->
+                        <a onclick="plusSlides(-1)" class="prev">&#10094;</a>
+                        <a onclick="plusSlides(1)" class="next">&#10095;</a>
+                    </div>
+
+                    <br>
+
+                    <!-- The Dots / Circles-->
+                    <div style="text-align: center;">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
                 </div>
             </div>
         </div>
