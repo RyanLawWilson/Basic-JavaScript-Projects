@@ -4,7 +4,10 @@ function countdown() {
     function tick() {
         seconds--;
 
-        //I think this is shorthand for document.getElementById("timer").innerHTML
+        /**************************************************
+         * This is not necessarily shorthand.  It works because when an ID is
+         *         
+        **************************************************/
         timer.innerHTML = seconds;
         setTimeout(tick, 1000);
         if (seconds == 1) {
