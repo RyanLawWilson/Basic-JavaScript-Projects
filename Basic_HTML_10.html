@@ -13,18 +13,134 @@
     <body>
         <h1 class="text-center mb-5 mt-2 text-dark">JavaScript Project 10</h1>
 
+
+
+        <!-- Counting From 1 to ### -->
         <div class="container bg-dark">
             <div class="row p-2">
+
+                <!-- Text Box and Button -->
                 <div class="col-4">
                     <h3 class="text-success text-center m-2 text-monospace font-weight-bolder">Counting from 1 to ##</h3>
                     <input type="text" class="form-control" id="stringToCount" placeholder="Up to a 3 digit number">
                     <button type="button" class="btn btn-primary btn-block my-3" onclick="counting()">Click to start count</button>
                 </div>
+
+                <!-- Output of the numbers -->
                 <div class="col-8 p-5">
                     <p class="text-danger" id="loop">Numbers will appear here.</p>
                 </div>
             </div>
         </div>
+
+
+
+        <!-- Using for loop | Using arrays | const keyword -->
+        <div class="container bg-dark my-3">
+            <div class="row p-2">
+
+                <!-- Using a loop to display instruments -->
+                <div class="col-4">
+                    <h4 class="text-success text-center m-2 text-monospace font-weight-bolder">Click to view some instruments</h4>
+                    <button type="button" class="btn btn-primary btn-block my-3" onclick="forLoop()">Click Here</button>
+                    <p class="text-info" id="listOfInstruments">Instruments</p>
+                </div>
+
+                <!-- Using an array to make a cat do stuff -->
+                <div class="col-4">
+                    <h4 class="text-success text-center m-2 text-monospace font-weight-bolder">What do you want the cat to do?</h4>
+                    <p class="text-secondary font-weight-bold" id="cat">the cat is doing nothing</p>
+
+                    <!-- This row contains the buttons to make the cat do things. -->
+                    <div class="row my-3">
+                        <div class="col p-1">
+                            <button type="button" class="btn btn-secondary btn-block" onclick="catPics(0)">Sleep</button>
+                        </div>
+                        <div class="col p-1">
+                            <button type="button" class="btn btn-primary btn-block" onclick="catPics(1)">Play</button>
+                        </div>
+                        <div class="col p-1">
+                            <button type="button" class="btn btn-success btn-block" onclick="catPics(2)">Eat</button>
+                        </div>
+                        <div class="col p-1">
+                            <button type="button" class="btn btn-warning btn-block" onclick="catPics(3)">Purr</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- An object with the const keyword -->
+                <div class="col-4">
+                    <h4 class="text-success text-center m-2 text-monospace font-weight-bolder">Using a constant array</h4>
+                    <p class="text-warning font-weight-bold" id="constant">guitar</p>
+                    <button type="button" class="btn btn-primary btn-block" onclick="constantFunction()">Click Me</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Utilizing the "let" Keyword | return statement -->
+        <div class="container bg-dark my-3">
+            <div class="row p-2">
+
+                <!-- The let keyword -->
+                <div class="col-4">
+                    <h4 class="text-success text-center m-2 text-monospace font-weight-bolder">The let keyword</h4>
+                    <p class="text-danger font-weight-bold" id="letText">Not sure when to use this</p>
+                    <button type="button" class="btn btn-primary btn-block" onclick="letKeyword()">Click Me</button>
+                </div>
+
+                <!-- Return statement -->
+                <div class="col-4">
+                    <h4 class="text-success text-center m-2 text-monospace font-weight-bolder">Return Statement</h4>
+                    <p class="text-info font-weight-bold" id="sqrtText">Gives you the Square Root of the number you type</p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">#</span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="number" id="numToSQRT">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-primary btn-block" onclick="usePowerFunction(2)">SQRT</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Objects with methods -->
+                <div class="col-4">
+                    <h4 class="text-success text-center m-2 text-monospace font-weight-bolder">Car Object:</h4>
+                    <p class="text-light m-2 text-monospace font-weight-bolder" id="carObject"></p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Make some boxes -->
+        <div class="container bg-dark my-3 py-3">
+
+            <!-- Title, Text box, and button -->
+            <div class="row justify-content-center align-items-center">
+                <div class="col-6">
+                    <h4 class="text-success m-2 text-monospace font-weight-bolder" id="boxMakerTitle">Make an <span class="font-italic text-warning">even</span> number of boxes:</h4>
+                </div>
+                <div class="col-2">
+                    <input type="text" class="form-control my-2" placeholder="2 digit #" id="boxMakerTextBox">
+                </div>
+                <div class="col-2">
+                    <button type="button" class="btn btn-primary btn-block" onclick="createBoxes()">GO!</button>
+                </div>
+            </div>
+
+            <!-- This is where the boxes will go -->
+            <div class="container bg-info py-3 my-2" id="boxContainer"></div>
+        </div>
+
+
 
         <script src="js/Basic_JavaScript_10.js"></script>
 
