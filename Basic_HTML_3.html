@@ -3,36 +3,79 @@
 	<head>
 		<title>Operations</title>
 		<meta charset = "utf-8">
-		
-		<link rel="stylesheet" type="text/css" href="">
+        
+        <style>
+            body {
+                opacity: 1;
+                transition: 1s opacity;
+				
+            }
+
+            body.fade-out {
+                opacity: 0;
+                transition: none;
+            }
+
+            p.vwParagraph {
+                font-size: 2vw;
+            }
+
+			
+        </style>
+
+    	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 	</head>
-	<body>
-        <p>Number 1:&nbsp;<span id="num1"></span>&nbsp;&nbsp;
-            <button onclick="num1Inc()">Increment</button>
-            <button onclick="num1Dec()">Decrement</button>
-        </p>
+	<body class="bg-dark text-light">
+        <script>document.body.className += " fade-out";</script>
 
-        <p>Number 2:&nbsp;<span id="num2"></span>&nbsp;&nbsp;
-            <button onclick="num2Inc()">Increment</button>
-            <button onclick="num2Dec()">Decrement</button>
-        </p>
-            
-        <p id="math1" onclick="add()">Click on me to add two numbers!</p>
+		<h1 class="text-center font-weight-bold my-3">JavaScript Challenges</h1>
 
-        <p id="math2" onclick="sub()">Click on me to subrtract two numbers</p>
-
-        <p id="math3" onclick="mul()">Click on me to multiply two numbers</p>
-
-        <p id="math4" onclick="div()">Click on me to divide two numbers</p>
-
-        <p id="math5" onclick="allOps()">Click on me to see all operations</p>
-
-        <p id="math6" onclick="mod()">Click on me to divide two numbers and return the remainder.</p>
-
-        <p id="math7" onclick="neg()">Click on me to negate two numbers</p>
-
-        <p id="math8" onclick="dist()">Click on me to find the distance between two points.</p>
+		<div class="container">
+			<div class="row align-items-center text-center">
+				<div class="col-6">
+					<p>Number 1:&nbsp;<span id="num1"></span>&nbsp;&nbsp;
+						<button onclick="num1Inc()">Increment</button>
+						<button onclick="num1Dec()">Decrement</button>
+					</p>
+			
+					<p>Number 2:&nbsp;<span id="num2"></span>&nbsp;&nbsp;
+						<button onclick="num2Inc()">Increment</button>
+						<button onclick="num2Dec()">Decrement</button>
+					</p>
+				</div>
+				<div class="col-6">
+					<p id="math1" onclick="add()" class="vwParagraph">Click on me to add two numbers!</p>
+					<p id="math2" onclick="sub()" class="vwParagraph">Click on me to subtract two numbers</p>
+					<p id="math3" onclick="mul()" class="vwParagraph">Click on me to multiply two numbers</p>
+					<p id="math4" onclick="div()" class="vwParagraph">Click on me to divide two numbers</p>
+					<p id="math5" onclick="allOps()" class="vwParagraph">Click on me to see all operations</p>
+					<p id="math6" onclick="mod()" class="vwParagraph">Click on me to divide two numbers and return the remainder.</p>
+					<p id="math7" onclick="neg()" class="vwParagraph">Click on me to negate two numbers</p>
+					<p id="math8" onclick="dist()" class="vwParagraph">Click on me to find the distance between two points.</p>
+				</div>
+			</div>
+		</div>
+        
+		
+		
+        
         
         <script src="js/Basic_JavaScript_3.js"></script>
+
+        <script>
+            $(function() {
+				$("body").removeClass("fade-out");
+			});
+		</script>
+		
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	</body>
 </html>
