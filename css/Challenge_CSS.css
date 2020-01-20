@@ -1,0 +1,138 @@
+/* This allows you to scroll smoothly */
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+body {
+    opacity: 1;
+    transition: 1s opacity;
+    
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+p.vwParagraph {
+    font-size: 1.5vw;
+}
+
+
+/*
+* This is for the popup form
+*/
+.open-button {
+    background-color: #555;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+    animation: movingButton 2s infinite;
+    z-index: 8;
+}
+
+@keyframes movingButton {
+    from {bottom: 23px; right: 28px; background-color: #555;}
+    50% {bottom: 40px; right: 33px; background-color: rgb(102, 40, 40);}
+    to {bottom: 23px; right: 28px; background-color: #555;}
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    z-index: 9;
+}
+
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+.form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.form-container {
+    background-color: rgb(47, 107, 49);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.95;
+}
+
+.form-container .cancel {
+    background-color: red;
+}
+
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+
+
+/* Zoom in on image */
+.zoomImage {
+    animation: zoom 15s forwards;
+}
+
+@keyframes zoom {
+    0% {transform: scale(1,1);}
+    50% {transform: scale(1.2,1.2);}
+    100% {transform: scale(1,1);}
+}
+
+/* Menu to move to different sections of the page */
+.fixedNavBar {
+    position: fixed;
+    z-index: 8;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+}
+
+/* Automatic Slideshow */
+#slideshow {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+}
+
+#slideshow > div {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+#slideshow > div > img {
+    width: 400px;
+}
+
+
+
+.sticky {
+    position: sticky;
+    top: 0;
+}

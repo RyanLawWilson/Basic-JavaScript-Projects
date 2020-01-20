@@ -3,27 +3,10 @@
 	<head>
 		<title>Operations</title>
 		<meta charset = "utf-8">
-        
-        <style>
-            body {
-                opacity: 1;
-                transition: 1s opacity;
-				
-            }
 
-            body.fade-out {
-                opacity: 0;
-                transition: none;
-            }
+		<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
-            p.vwParagraph {
-                font-size: 2vw;
-            }
-
-			
-        </style>
-
-    	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/Challenge_CSS.css">
 
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -34,7 +17,24 @@
 
 		<h1 class="text-center font-weight-bold my-3">JavaScript Challenges</h1>
 
-		<div class="container">
+		<!-- The nav bar -->
+		<ul class="nav flex-column fixedNavBar">
+			<li class="nav-item">
+				<a class="nav-link active text-danger font-weight-bolder btn btn-primary m-1" href="#playingWithNumbers">Old JS Assignment</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link active text-danger font-weight-bolder btn btn-primary m-1" href="#phoneNumberForm">Form w/ phone#</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link active text-danger font-weight-bolder btn btn-primary m-1" href="#zoomingInOut">Image Zoom in/out</a>
+			</li>
+		</ul>
+
+
+
+
+		<!-- This code is from previous assignment -->
+		<div class="container" id="playingWithNumbers">
 			<div class="row align-items-center text-center">
 				<div class="col-6">
 					<p>Number 1:&nbsp;<span id="num1"></span>&nbsp;&nbsp;
@@ -59,23 +59,175 @@
 				</div>
 			</div>
 		</div>
-        
 		
+		<!-- Form that utilizes phone number field -->
+		<div class="container" id="phoneNumberForm">
+			<div class="row justify-content-center align-items-center">
+
+				<!-- Form -->
+				<div class="col-6">
+					<h3 class="text-center font-weight-bold my-3">Form with phone number field</h3>
+
+					<form name="form" onsubmit="return validateForm()">
+						<div class="form-group">
+							<label for="First Name">First Name</label>
+							<input name="firstName" type="text" class="form-control" placeholder="First Name...">
+						</div>
+						<div class="form-group">
+							<label for="Last Name">Last Name</label>
+							<input name="lastName" type="text" class="form-control" placeholder="Last Name...">
+						</div>
+						<div class="form-group">
+							<label for="Email">Email</label>
+							<input name="email" type="text" class="form-control" placeholder="email...">
+						</div>
+						<div class="form-group">
+							<label for="Phone">Phone Number</label>
+							<input name="phoneNumber" type="tel" class="form-control" placeholder="phone number...">
+						</div>
+						<div class="row text-center">
+							<div class="col">
+								<button type="submit" class="btn btn-primary btn-block">Submit</button>
+							</div>
+						</div>
+						
+					</form>
+				</div>
+
+				<!-- Automatic Slideshow and sticky button -->
+				<div class="col-5">
+					<div id="slideshow">
+						<div><img src="images/jigglypuff.jpg" alt="JigglyPuff"></div>
+						<div><img src="images/kingkrool.jpg" alt="King K. Rool"></div>
+						<div><img src="images/kingdedede.jpg" alt="King Deedeedee"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- A Sticky button -->
+		<div class="container sticky-top">
+			<div class="row text-right">
+				<div class="col">
+					<button type="button" class="btn btn-warning pull-right" onclick="openForm()">Sticky Button</button>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Image that zooms in and out -->
+		<div class="container" id="zoomingInOut">
+			<div class="row my-5 justify-content-center">
+				<div class="col-8">
+					<!-- Image that you can zoom in on -->
+					<img src="images/kingdedede.jpg" class="img-fluid zoomImage my-5" alt="King Dedede">
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- Space -->
+		<div class="container my-5">
+			<div class="row my-5">
+				<div class="col my-5"></div>
+			</div>
+		</div>
+		<div class="container my-5">
+			<div class="row my-5">
+				<div class="col my-5"></div>
+			</div>
+		</div>
+		<div class="container my-5">
+			<div class="row my-5">
+				<div class="col my-5"></div>
+			</div>
+		</div>
+		<div class="container my-5">
+			<div class="row my-5">
+				<div class="col my-5"></div>
+			</div>
+		</div>
+		<div class="container my-5">
+			<div class="row my-5">
+				<div class="col my-5"></div>
+			</div>
+		</div>
+
+
+
+		<!-- Popup form -->
+		<button class="button open-button" type="submit" onclick="openForm()">Open Form</button>
+		<div class="form-popup" id="popupForm">
+			<form class="form-container">
+				<h1 class="text-warning">Login</h1>
+
+				<label for="email"><strong>Email</strong></label>
+				<input name="email" type="text" placeholder="Enter Email" required>
+
+				<label for="password"><strong>Password</strong></label>
+				<input name="password" type="password" placeholder="Enter Email" required>
+
+				<button class="btn btn-block" type="submit">Login</button>
+				<button class="btn btn-block cancel" type="submit" onclick="closeForm()">Close</button>
+			</form>
+		</div>
+		
+
 		
         
         
         <script src="js/Basic_JavaScript_3.js"></script>
 
         <script>
+			//Makes the fade-in effect
             $(function() {
 				$("body").removeClass("fade-out");
 			});
+
+			function validateForm() {
+				if (document.forms["form"]["firstName"].value == "") {
+					alert("First name field must not be empty!")
+				}
+
+				if (document.forms["form"]["lastName"].value == "") {
+					alert("Last name field must not be empty!")
+				}
+
+				if (document.forms["form"]["email"].value == "") {
+					alert("Email field must not be empty!")
+				}
+
+				if (document.forms["form"]["phoneNumber"].value == "") {
+					alert("Phone number field must not be empty!")
+				}
+			}
+
+			function openForm() {
+				document.getElementById("popupForm").style.display = "block";
+			}
+
+			function closeForm() {
+				document.getElementById("popupForm").style.display = "none";
+			}
+
+			$("#slideshow > div:gt(0)").hide();
+			setInterval(function() { 
+				$('#slideshow > div:first')
+				.fadeOut(1000)
+				.next()
+				.fadeIn(1000)
+				.end()
+				.appendTo('#slideshow');
+			}, 3000);
+			
 		</script>
 		
+		<!-- Having multiple jQuery libraries in the html file makes the page act weird -->
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
 	</body>
 </html>
